@@ -18,14 +18,14 @@ html {
   --blue: #4285f4;
   --yellow: #fbbc05;
   --green: #34a853;
-  --red: #ea4335;
+  --orange: #ea4335;
 
   /* font-family */
   --open-sans: "Open Sans";
   --lato: "Lato";
 
   /* width */
-  --max-width: 1100px;
+  --max-width: 120rem;
 }
 
 body {
@@ -135,7 +135,7 @@ p {
 }
 
 .btn-red {
-  background-color: var(--red);
+  background-color: var(--orange);
   color: var(--black);
   border: 2px solid var(--black);
 }
@@ -173,7 +173,7 @@ p {
   color: black;
 }
 .bg-red {
-  background-color: var(--red);
+  background-color: var(--orange);
   color: black;
 }
 
@@ -191,6 +191,12 @@ p {
 }
 .p-4 {
   padding: 2rem;
+}
+.p-5 {
+  padding: 4rem;
+}
+.p-6 {
+  padding: 8rem;
 }
 
 /* padding x-axis */
@@ -210,6 +216,14 @@ p {
   padding-left: 2rem;
   padding-right: 2rem;
 }
+.px-5 {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+.px-6 {
+  padding-left: 8rem;
+  padding-right: 8rem;
+}
 
 /* padding y-axis */
 .px-1 {
@@ -228,6 +242,14 @@ p {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
+.px-5 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+.px-6 {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
 
 /* Margins */
 
@@ -244,6 +266,12 @@ p {
 .m-4 {
   margin: 2rem;
 }
+.m-5 {
+  margin: 4rem;
+}
+.m-6 {
+  margin: 8rem;
+}
 
 /* margin x-axis */
 .mx-1 {
@@ -255,12 +283,20 @@ p {
   padding-right: 1rem;
 }
 .mx-3 {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
 }
 .mx-4 {
-  padding-left: 2rem;
-  padding-right: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+.mx-5 {
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+.mx-6 {
+  margin-left: 8rem;
+  margin-right: 8rem;
 }
 
 /* margin y-axis */
@@ -280,5 +316,76 @@ p {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
+.my-5 {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+.my-6 {
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+}
 
 /* =================== Page Styles =================== */
+
+/* nav-bar */
+
+#main-nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+.nav-bar {
+  display: grid;
+  grid-template-columns: minmax(6rem, 8rem) 5fr 2fr;
+  align-content: center;
+  align-items: center;
+  justify-items: center;
+}
+
+.nav-bar .logo img {
+  display: block;
+  width: 100%;
+  clip-path: polygon(
+    10% 0,
+    90% 0,
+    100% 10%,
+    100% 90%,
+    90% 100%,
+    10% 100%,
+    0 90%,
+    0 10%
+  );
+}
+
+.nav-bar .page-links {
+  justify-self: left;
+}
+
+.nav-bar .page-links ul {
+  display: flex;
+}
+
+.nav-bar .page-links ul a {
+  margin: 0 0.8rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.nav-bar .page-links ul li .active {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--orange);
+}
+
+.nav-bar .page-links ul li:hover {
+  background: var(--light);
+}
+
+.nav-bar .social-media {
+  justify-self: end;
+}
+
+.nav-bar .social-media a {
+  margin: 0 0.2rem;
+}
