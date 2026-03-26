@@ -482,3 +482,7 @@ p {
   border-radius: 1rem;
   background-color: #000;
 }
+
+.articles-container a {
+  color: var(--black);
+}
