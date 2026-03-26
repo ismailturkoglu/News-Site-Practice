@@ -33,7 +33,6 @@ body {
   line-height: 1.5;
   font-family: var(--lato), sans-serif;
   background-color: var(--light);
-  padding: 0.5rem;
 }
 
 a {
@@ -72,7 +71,7 @@ p {
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 1rem;
+  padding: 0 1rem;
 }
 
 /* Buttons */
@@ -81,7 +80,7 @@ p {
   display: inline-block;
   background-color: var(--dark);
   color: var(--white);
-  border: 2px solid var(--black);
+  border: 1px solid var(--black);
   padding: 0.4rem 1.6rem;
   border-radius: 0.8rem;
   text-align: center;
@@ -134,7 +133,7 @@ p {
   border: 2px solid var(--black);
 }
 
-.btn-red {
+.btn-orange {
   background-color: var(--orange);
   color: var(--black);
   border: 2px solid var(--black);
@@ -172,7 +171,7 @@ p {
   background-color: var(--green);
   color: black;
 }
-.bg-red {
+.bg-orange {
   background-color: var(--orange);
   color: black;
 }
@@ -226,27 +225,27 @@ p {
 }
 
 /* padding y-axis */
-.px-1 {
+.py-1 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
-.px-2 {
+.py-2 {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
-.px-3 {
+.py-3 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
-.px-4 {
+.py-4 {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
-.px-5 {
+.py-5 {
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
-.px-6 {
+.py-6 {
   padding-top: 8rem;
   padding-bottom: 8rem;
 }
@@ -325,12 +324,47 @@ p {
   margin-bottom: 8rem;
 }
 
+/* Categories */
+
+.category {
+  display: inline-block;
+  padding: 0.2rem 1rem;
+  border-radius: 1.4rem;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  margin: 1.5rem 0;
+}
+
+.category-world {
+  background-color: var(--blue);
+  color: white;
+}
+
+.category-economy {
+  background-color: var(--yellow);
+  color: white;
+}
+
+.category-technology {
+  background-color: var(--orange);
+  color: white;
+}
+
+.category-sports {
+  background-color: var(--green);
+  color: white;
+}
+
 /* =================== Page Styles =================== */
+
+/* header */
 
 /* nav-bar */
 
 #main-nav {
   position: sticky;
+  z-index: 3;
   top: 0;
   left: 0;
 }
@@ -388,4 +422,63 @@ p {
 
 .nav-bar .social-media a {
   margin: 0 0.2rem;
+}
+
+/* main-header */
+
+#main-header {
+  position: relative;
+}
+
+#main-header::before {
+  content: "";
+  position: absolute;
+  background: url("../img/2-world.jpg") no-repeat center center/cover;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+#main-header .header-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  height: 50vh;
+}
+
+#main-header .main-header__content {
+  z-index: 2;
+  color: var(--white);
+  background-color: rgba(119, 136, 153, 0.2);
+  box-shadow:
+    rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
+    rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
+    rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+
+/* main */
+
+/* main-articles */
+
+.articles-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.articles-container article {
+  background-color: var(--white);
+  padding: 1rem;
+}
+
+.articles-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+  height: 20vh;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 1rem;
+  background-color: #000;
 }
