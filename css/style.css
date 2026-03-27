@@ -356,6 +356,12 @@ p {
   color: white;
 }
 
+/* Card */
+
+.card {
+  padding: 1rem;
+}
+
 /* =================== Page Styles =================== */
 
 /* header */
@@ -551,4 +557,28 @@ p {
   display: grid;
   grid-template-columns: 5fr 2fr;
   gap: 2rem;
+}
+
+#article-detail .meta {
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0.5rem;
+  padding: 0 1rem;
+}
+
+#article-detail .meta .category {
+  margin: 1rem;
+}
+
+#article-detail .aside-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+#article-detail #categories li {
+  padding: 0.5rem 0;
+  border-bottom: 1px dotted gray;
 }
