@@ -2,7 +2,7 @@
 
 A responsive news website built with **HTML** and **CSS**, focusing on modern layout techniques and clean UI design.
 
-[**https://ismailturkoglu.github.io/News-Site-Practice/**](https://ismailturkoglu.github.io/news-site-practice/)
+[**https://ismailturkoglu.github.io/news-site-practice/**](https://ismailturkoglu.github.io/news-site-practice/)
 
 # Features
 
